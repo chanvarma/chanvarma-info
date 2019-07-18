@@ -1,9 +1,12 @@
 body {
-  background-color: powderblue;
+    background-color: powderblue;
 }
+
 h3 {
-  color: rgb(127, 17, 213);
+    color: rgb(127, 17, 213);
+    font: 'IBM Plex Sans'
 }
+
 p {
-  color: red;
+    color: red;
 }
