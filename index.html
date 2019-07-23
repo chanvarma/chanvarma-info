@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,400i,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/master.css">
+
+    <title>chanakya varma</title>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function(event) {
+        if (localStorage.getItem('theme') === 'dark') {
+            setDarkTheme();
+        } else {
+            setLightTheme();
+        }
+    });
+
+    function toggleTheme(event) {
+        event.preventDefault();
+        if (document.body.className === 'dark') {
+            setLightTheme();
+        } else {
+            setDarkTheme();
+        }
+    }
+
+    function setLightTheme() {
+        document.body.className = 'light';
+        document.getElementsByClassName('toggle-theme')[0].children[0].innerHTML = 'Dark';
+        localStorage.setItem('theme', 'light');
+    }
+
+    function setDarkTheme() {
+        document.body.className = 'dark';
+        document.getElementsByClassName('toggle-theme')[0].children[0].innerHTML = 'Light';
+        localStorage.setItem('theme', 'dark');
+    }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>chanakya varma</h1>
+        <p>Description</p>
+        <h2>reflections</h2>
+
+        <nav class="posts">
+            <ul>
+                <li><span class="date">2019-07-23</span><a href="posts/2019-07-23-initial-post.html">Initial post</a></li>
+            </ul>
+        </nav>
+
+        <p class="all-posts"><a href="all-posts.html">all posts</a></p>
+
+        <h2>pages</h2>
+        <nav class="pages">
+            <ul>
+                <li><a href="pages/about.html">about</a></li>
+            </ul>
+        </nav>
+        <p class="toggle-theme">
+            <a href="#" onclick="toggleTheme(event)">Dark</a>
+        </p>
+    </div>
+</body>
+
+</html>
