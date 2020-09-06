@@ -1,4 +1,5 @@
 # Initial page
 
-* [Interviews]("pages/interviews")
+* [Initial page](README.md)
+* [Interviews](interviews.md)
 
